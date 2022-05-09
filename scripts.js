@@ -76,11 +76,11 @@ function addPoint(event) {
         addPointToDividedDifferences(transformedPoints[0],transformedPoints[1])
         updateFunctionValues()
         setUpGrid()
+        drawGraph()
         for(var i = 0; i < points.length; ++i) {
             var canvasPoints = untransformCoordinates(points[i][0], points[i][1])
             drawPoint(canvasPoints[0], canvasPoints[1])
         }
-        drawGraph()
         document.getElementById("distinct-x-error").style.display = "none"
     }
     else {
